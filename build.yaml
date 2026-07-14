@@ -1,5 +1,5 @@
 include:
-  - board: xiao_ble/zmk
+  - board: xiao_ble/nrf52840/zmk
     shield: my_split_left
-  - board: xiao_ble/zmk
+  - board: xiao_ble/nrf52840/zmk
     shield: my_split_right
