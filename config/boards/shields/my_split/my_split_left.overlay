@@ -1,10 +1,11 @@
 #include "my_split.dtsi"
+#include <dt-bindings/gpio/gpio.h>
 
 / {
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
-        diode-direction = "col2row"; // ダイオードの向きがRow to Colの場合は "row2col" に変更してください
+        diode-direction = "col2row";
 
         col-gpios
             = <&xiao_d 0 GPIO_ACTIVE_HIGH>
