@@ -7,28 +7,16 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // 画像に基づくベースレイヤー
             bindings = <
 &kp Q      &kp W      &kp E      &kp R      &kp T                 &kp Y      &kp U      &kp I      &kp O      &kp P
 &kp A      &kp S      &kp D      &kp F      &kp G                 &kp H      &kp J      &kp K      &kp L      &kp TAB
 &kp LSHFT  &kp Z      &kp X      &kp C      &kp V                 &kp B      &kp N      &kp M      &mo 2      &mo 3
-&kp LCTRL  &kp LGUI   &kp LALT   &kp LANG1  &mo 1      &kp SPACE  &kp RET    &mo 1      &kp BSPC   &kp RGUI   &kp ESC    &mo 4
+&kp LCTRL  &bt BT_CLR &kp LALT   &kp LANG1  &mo 1      &kp SPACE  &kp RET    &mo 1      &kp BSPC   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR
             >;
         };
-
-        // レイヤー1 (Layer0, Layer1 押下時)
-        layer_1 {
-            bindings = <
-&trans     &trans     &trans     &trans     &trans                &trans     &trans     &trans     &trans     &trans
-&trans     &trans     &trans     &trans     &trans                &trans     &trans     &trans     &trans     &trans
-&trans     &trans     &trans     &trans     &trans                &trans     &trans     &trans     &trans     &trans
-&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-            >;
-        };
-
-        // コンパイルを通すための仮レイヤー (Layer2, 3, 4)
-        layer_2 { bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
-        layer_3 { bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
-        layer_4 { bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
+        // 他のレイヤーは省略可ですが、一旦このままビルドして試してください
+        layer_1 { bindings = <&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>; };
+        layer_2 { bindings = <&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>; };
+        layer_3 { bindings = <&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>; };
     };
 };
