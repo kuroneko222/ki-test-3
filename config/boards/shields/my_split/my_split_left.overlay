@@ -23,4 +23,11 @@
             , <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
+}; // ここまでが元のコード
+
+// --- ここから追記 ---
+/ {
+    chosen {
+        zmk,battery = &vbatt;
+    };
 };
