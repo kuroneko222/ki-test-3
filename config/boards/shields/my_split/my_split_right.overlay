@@ -28,3 +28,9 @@
             ;
     };
 };
+// --- ここから追記 ---
+/ {
+    chosen {
+        /delete-property/ zmk,battery;
+    };
+};
